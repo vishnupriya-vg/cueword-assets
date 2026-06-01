@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--primary:#1A8C7D;--primaryDark:#0D6A5E;--accent:#F4A261;--textDark:#0D3D36;--textMuted:#8AADA8;}
+  html,body{margin:0;padding:0;}*{box-sizing:border-box;}
+  body{font-family:'DM Sans',-apple-system,sans-serif;}
+  .card{
+    width:360px;height:640px;overflow:hidden;
+    display:flex;flex-direction:column;padding:34px 30px 30px;
+    background:radial-gradient(circle, rgba(26,140,125,0.09) 1.8px, transparent 2px) 0 0 / 25px 25px,
+               linear-gradient(165deg,#E8F6F4,#D2EEEA);
+  }
+  .header{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:9px;}
+  .brand .appicon{width:34px;height:34px;border-radius:9px;box-shadow:0 2px 5px rgba(13,61,54,.18);}
+  .brand .wm{font-size:16px;font-weight:800;color:var(--primaryDark);}
+  .fmt{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--primary);text-transform:uppercase;}
+  .content{flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px;}
+  .root-badge{
+    display:inline-flex;align-items:center;
+    background:var(--primary);color:#fff;
+    padding:6px 14px;border-radius:100px;
+    font-size:13px;font-weight:800;letter-spacing:.05em;
+    align-self:flex-start;
+  }
+  .kicker{font-size:32px;font-weight:800;color:var(--primaryDark);line-height:1.1;letter-spacing:-.02em;}
+  .clue{font-size:15.5px;font-weight:500;color:var(--textDark);line-height:1.45;}
+  .words{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .word-chip{
+    background:#fff;border-radius:13px;
+    padding:15px 10px;
+    font-size:15px;font-weight:800;color:var(--primaryDark);
+    text-align:center;
+    box-shadow:0 4px 14px -4px rgba(13,61,54,.18);
+    letter-spacing:-.01em;
+  }
+  .question{font-size:16px;font-weight:800;color:var(--primary);text-align:center;}
+  .bottom{display:flex;align-items:center;gap:10px;margin-top:4px;}
+  .fox{width:78px;height:auto;flex-shrink:0;filter:url(#rmwhite);}
+  .cta{
+    flex:1;padding:12px 14px;border-radius:13px;
+    background:#fff;box-shadow:0 4px 14px -4px rgba(13,61,54,.18);
+    font-size:13px;font-weight:700;color:var(--primaryDark);
+    line-height:1.35;
+  }
+  .cta span{color:var(--accent);}
+</style>
+</head>
+<body>
+
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="rmwhite" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" in="SourceGraphic" result="mask"
+          values="0 0 0 0 0
+                  0 0 0 0 0
+                  0 0 0 0 0
+                 -1 -1 -1 0 2.6"/>
+        <feComposite in="SourceGraphic" in2="mask" operator="in"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="card">
+    <div class="header">
+      <div class="brand">
+        <img class="appicon" src="../../../Project%20folder/icon.png" alt="Cueword">
+        <span class="wm">Cueword</span>
+      </div>
+      <div class="fmt">Root Riddle</div>
+    </div>
+    <div class="content">
+      <div class="root-badge">DICT &nbsp;&middot;&nbsp; Latin for &ldquo;to say&rdquo;</div>
+      <div class="kicker">Spot<br>the Fake.</div>
+      <div class="clue">Three share the root <b>dict</b>. One crashed the party &mdash; it only <i>looks</i> like it belongs.</div>
+      <div class="words">
+        <div class="word-chip">DICTATE</div>
+        <div class="word-chip">PREDICT</div>
+        <div class="word-chip">CONTRADICT</div>
+        <div class="word-chip">DISTRICT</div>
+      </div>
+      <div class="question">Which one doesn&rsquo;t belong? &#128071;</div>
+    </div>
+    <div class="bottom">
+      <img class="fox" src="../../../Project%20folder/fox_body_pointing.png" alt="Remi">
+      <div class="cta">Tap the word that snuck in &mdash; <span>answer drops tonight!</span></div>
+    </div>
+  </div>
+</body>
+</html>
